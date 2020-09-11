@@ -5,6 +5,7 @@ import cn.edu.buaa.myblog.entity.BlogCategory;
 import cn.edu.buaa.myblog.service.CategoryService;
 import cn.edu.buaa.myblog.utils.PageQueryUtil;
 import cn.edu.buaa.myblog.utils.PageResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,6 +15,7 @@ import java.util.Locale;
 @Service
 public class CategoryServiceImpl implements CategoryService {
 
+    @Autowired
     private BlogCategoryMapper blogCategoryMapper;
 
     @Override

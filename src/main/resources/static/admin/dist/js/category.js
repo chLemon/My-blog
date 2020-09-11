@@ -136,28 +136,28 @@ function deleteCagegory() {
         buttons: true,
         dangerMode: true,
     }).then((flag) => {
-            if(flag) {
-                $.ajax({
-                    type: "POST",
-                    url: "/admin/categories/delete",
-                    contentType: "application/json",
-                    data: JSON.stringify(ids),
-                    success: function (r) {
-                        if (r.resultCode == 200) {
-                            swal("删除成功", {
-                                icon: "success",
-                            });
-                            $("#jqGrid").trigger("reloadGrid");
-                        } else {
-                            swal(r.message, {
-                                icon: "error",
-                            });
-                        }
+        if(flag) {
+            $.ajax({
+                type: "POST",
+                url: "/admin/categories/delete",
+                contentType: "application/json",
+                data: JSON.stringify(ids),
+                success: function (r) {
+                    if (r.resultCode == 200) {
+                        swal("删除成功", {
+                            icon: "success",
+                        });
+                        $("#jqGrid").trigger("reloadGrid");
+                    } else {
+                        swal(r.message, {
+                            icon: "error",
+                        });
                     }
-                });
-            }
+                }
+            });
         }
-    )
+    }
+)
     ;
 }
 
