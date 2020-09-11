@@ -49,13 +49,16 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!--需要自动生成代码的表及对应的类名设置-->
-        <table tableName="tb_blog_category" domainObjectName="BlogCategory"
+        <table tableName="tb_blog_tag_relation" domainObjectName="BlogTagRelation"
                enableCountByExample="false"
                enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
         </table>
 
 
+<!--        tb_blog_tag_relation-->
 
     </context>
 </generatorConfiguration>
